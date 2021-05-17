@@ -55,8 +55,18 @@ function performCalcualtion() {
         result= (parseInt(calaculator.firstNumber)) - (parseInt(calaculator.displayNumber));
 
     }
+    
+    // object yang akan dikirimkan sebagai argument fungsi putHistory
+    const history={
+        firstNumber:calaculator.firstNumber,
+        secondNumber:calaculator.displayNumber,
+        operator:calaculator.operator,
+        result:result
+    }
+    putHistory(history);
 
    calaculator.displayNumber=result;
+   renderHistory();
 
 
     
